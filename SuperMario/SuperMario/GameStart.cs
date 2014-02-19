@@ -6,6 +6,7 @@
     {
         private static void Main()
         {
+            RenderEngine.Render();
         }
     }
 }
