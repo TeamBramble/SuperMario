@@ -52,6 +52,7 @@
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameStart.cs" />
     <Compile Include="IEnemy.cs" />
+    <Compile Include="IHero.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="IObstacle.cs" />
     <Compile Include="IPoints.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="RenderEngine.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="Static.cs" />
+    <Compile Include="Hero.cs" />
     <Compile Include="TimeBonus.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="Turtle.cs" />
