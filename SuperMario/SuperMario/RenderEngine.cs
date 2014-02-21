@@ -7,7 +7,9 @@
     public static class RenderEngine
     {
         private const char Pixel = '\u2588';
-        private static readonly int canvasWidth = 340;
+        private static int windowsX = 0;
+        private static readonly int windowsY = 0;
+        private static readonly int canvasWidth = 1420;
         private static readonly int canvasHeight = 58;
         private static readonly int windowWidth = 170;
         private static readonly int windowHeight = 58;
@@ -17,7 +19,8 @@
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.SetWindowSize(windowWidth, windowHeight);
-            backgroundColors = GetBitmapColors("..\\..\\images\\Canvas.jpg");
+            Console.SetBufferSize(9999, 9999);
+            backgroundColors = GetBitmapColors("..\\..\\images\\MarioMap1.jpg");
 
             for (int h = 0; h < canvasHeight; h++)
             {
@@ -28,6 +31,7 @@
                 }
                 Console.WriteLine();
             }
+            Console.SetWindowPosition(windowsX, windowsY);
         }
 
         public static void RenderHero(Hero hero, string move = "None")
@@ -36,11 +40,15 @@
             {
                 ClearHeroSigns(hero, move);
                 hero.LocationX++;
+                if (hero.LocationX > (windowWidth / 2))
+                {
+                    Console.SetWindowPosition(windowsX++, windowsY);
+                }
             }
             else if (move == "Left")
             {
                 ClearHeroSigns(hero, move);
-                hero.LocationX--;
+                hero.LocationX--;       
             }
 
             Console.SetCursorPosition(hero.LocationX, hero.LocationY);
@@ -114,15 +122,15 @@
 
         private static ConsoleColor[,] GetBitmapColors(string path)
         {
-            ConsoleColor[,] colors = new ConsoleColor[canvasWidth, canvasHeight];
             Bitmap image = new Bitmap(path);
+            ConsoleColor[,] colors = new ConsoleColor[canvasWidth, canvasHeight];
             int widthLimit = image.Width;
             int x = 0;
             int y = 0;
 
-            for (int h = 0; h < 58; h++)
+            for (int h = 0; h < canvasHeight; h++)
             {
-                for (int w = 0; w < 340; w++)
+                for (int w = 0; w < canvasWidth; w++)
                 {
                     colors[w, h] = GetCurrentColor(x, y, image);
                     x += 7;
