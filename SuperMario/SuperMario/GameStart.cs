@@ -8,20 +8,18 @@
         {
             RenderEngine.RenderMap();
             Hero superMario = new Hero();
-            RenderEngine.RenderHero(superMario);
+            //test na rendvaneto na kostenurka
+            Turtle turtle = new Turtle(500, 100, 42);
+            
+
+            //RenderEngine.RenderHero(superMario);
 
             while (true)
             {
-                ConsoleKeyInfo inputKey = Console.ReadKey();
-                if (inputKey.Key == ConsoleKey.RightArrow)
-                {
-                    RenderEngine.RenderHero(superMario, "Right");
-                }
-                else if (inputKey.Key == ConsoleKey.LeftArrow)
-                {
-                    RenderEngine.RenderHero(superMario, "Left");
-                }
+                turtle.Moving();
+                superMario.MovingHero(superMario);
             }
+           
         }
     }
 }
