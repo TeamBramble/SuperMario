@@ -5,8 +5,8 @@
 
     public abstract class Obstacle : IObstacle
     {   
-        private char[,] background;
-
+        
+        /*
         public void RenderMap()
         {
             
@@ -24,5 +24,7 @@
             }
          
         }
+         */
+        //TO DO Да се конвертира от string[] към char[ , ], или по някакъв друг начин директно от файла,за да се проверява за сблъсъци
     }
 }

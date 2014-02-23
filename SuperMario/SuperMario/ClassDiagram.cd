@@ -159,14 +159,14 @@
       <FileName>Enemy\Flower.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="SuperMario.IMovable" Collapsed="true">
+  <Interface Name="SuperMario.IMovable">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SuperMario.IStatic">
+  <Interface Name="SuperMario.IStatic" Collapsed="true">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

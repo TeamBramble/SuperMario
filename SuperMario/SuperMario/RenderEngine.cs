@@ -11,30 +11,31 @@
         private const char Pixel = '\u2588';
         private static int windowsX = 0;
         private static readonly int windowsY = 0;
-        private static readonly int canvasWidth = 1420;
-        private static readonly int canvasHeight = 58;
-        private static readonly int windowWidth = 170;
-        private static readonly int windowHeight = 58;
-        private static ConsoleColor[,] backgroundColors = new ConsoleColor[canvasWidth, canvasHeight];
+       
+        private static readonly int windowWidth = 100;
+        private static readonly int windowHeight = 30;
+
 
         public static void RenderMap()
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.SetWindowSize(windowWidth, windowHeight);
-            Console.SetBufferSize(9999, 9999);
+            Console.SetBufferSize(9999, 300);
             
             using (StreamReader reader = new StreamReader("..\\..\\images\\Background.txt"))
             {
-               string[] lines = reader.ReadToEnd().Split(Environment.NewLine.ToCharArray());
+               string[] lines = reader.ReadToEnd().Split('\n');
 
                 foreach (string line in lines)
                 {
+                    Console.WriteLine(line);
                     Console.WriteLine(line);
                 }
                 
             }
             Console.SetWindowPosition(windowsX, windowsY);
         }
+        
         public static void RenderEnemy(Enemy enemy, int range)//slagam range dokato napravim collision detection
         {
             
