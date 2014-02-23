@@ -12,12 +12,12 @@
             Turtle turtle = new Turtle(500, 100, 42);
             
 
-            //RenderEngine.RenderHero(superMario);
+            RenderEngine.RenderHero(superMario);
 
             while (true)
             {
                 //turtle.Moving();
-              //  superMario.MovingHero(superMario);
+              superMario.MovingHero(superMario);
             }
            
         }

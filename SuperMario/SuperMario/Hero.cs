@@ -5,8 +5,8 @@
 
     public class Hero : IHero//,IMovable
     {
-        private int locationX = 50;
-        private int locationY = 42;
+        private int locationX = 10;
+        private int locationY = 21;
 
         /* taka moje da izglejda Moving() za hero, ako oprostim renderEngine-a
         public void Moving()
@@ -22,7 +22,7 @@
             }
         }
          */
-        /*public void MovingHero(Hero mario)
+      public void MovingHero(Hero mario)
         {
             ConsoleKeyInfo inputKey = Console.ReadKey();
             if (inputKey.Key == ConsoleKey.RightArrow)
@@ -34,7 +34,7 @@
                 RenderEngine.RenderHero(mario,"Left");
             }
         }
-         */ 
+        
         public int LocationX
         {
             get
