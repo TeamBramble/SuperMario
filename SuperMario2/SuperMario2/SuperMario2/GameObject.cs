@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
 
     public abstract class GameObject : IRenderable, ICollidable, IObjectProducer
@@ -98,6 +99,18 @@
         public virtual char[,] GetImage()
         {
             return this.CopyBodyMatrix(this.body);
+        }
+        
+        public void WriteThis(GameObject target)
+        {
+            string typeOfTarget = target.GetType().Name;
+
+            string[] lines = File.ReadAllLines(typeOfTarget + ".txt");
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
+
         }
 
         public virtual IEnumerable<GameObject> ProduceObjects()

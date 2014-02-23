@@ -22,7 +22,7 @@
             }
         }
          */
-        public void MovingHero(Hero mario)
+        /*public void MovingHero(Hero mario)
         {
             ConsoleKeyInfo inputKey = Console.ReadKey();
             if (inputKey.Key == ConsoleKey.RightArrow)
@@ -34,6 +34,7 @@
                 RenderEngine.RenderHero(mario,"Left");
             }
         }
+         */ 
         public int LocationX
         {
             get

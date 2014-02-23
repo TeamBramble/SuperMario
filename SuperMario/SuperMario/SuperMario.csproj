@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,24 +47,24 @@
     <Compile Include="Bonus.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="Coin.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="Flower.cs" />
-    <Compile Include="FlyingTurtle.cs" />
+    <Compile Include="Enemy\Enemy.cs" />
+    <Compile Include="Enemy\Flower.cs" />
+    <Compile Include="Enemy\FlyingTurtle.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameStart.cs" />
-    <Compile Include="IEnemy.cs" />
+    <Compile Include="Enemy\IEnemy.cs" />
     <Compile Include="IHero.cs" />
     <Compile Include="IMovable.cs" />
     <Compile Include="IObstacle.cs" />
     <Compile Include="IPoints.cs" />
     <Compile Include="IStatic.cs" />
-    <Compile Include="LandTurtle.cs" />
+    <Compile Include="Enemy\LandTurtle.cs" />
     <Compile Include="Live.cs" />
-    <Compile Include="MeatEater.cs" />
+    <Compile Include="Enemy\MeatEater.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Pipe.cs" />
-    <Compile Include="Plant.cs" />
+    <Compile Include="Enemy\Plant.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RenderEngine.cs" />
@@ -72,7 +73,8 @@
     <Compile Include="Hero.cs" />
     <Compile Include="TimeBonus.cs" />
     <Compile Include="Timer.cs" />
-    <Compile Include="Turtle.cs" />
+    <Compile Include="Enemy\Turtle.cs" />
+    <Compile Include="WriteObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

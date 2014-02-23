@@ -16,8 +16,8 @@
 
             while (true)
             {
-                turtle.Moving();
-                superMario.MovingHero(superMario);
+                //turtle.Moving();
+              //  superMario.MovingHero(superMario);
             }
            
         }

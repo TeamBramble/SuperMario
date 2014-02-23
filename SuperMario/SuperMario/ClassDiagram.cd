@@ -14,29 +14,29 @@
       <FileName>GameEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario.Timer">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+  <Class Name="SuperMario.Timer" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAQAAAAAAAAAAAAgACAAAggAAACAAAYAAAAIAAA=</HashCode>
       <FileName>Timer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario.Score">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+  <Class Name="SuperMario.Score" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAgAAACKQCAgAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Score.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario.Live">
-    <Position X="0.5" Y="5" Width="1.5" />
+  <Class Name="SuperMario.Live" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Live.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.Player">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -45,13 +45,13 @@
   <Class Name="SuperMario.Move">
     <Position X="2.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Move.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SuperMario.Static">
-    <Position X="2.5" Y="2.5" Width="1.5" />
+  <Class Name="SuperMario.Static" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Static.cs</FileName>
@@ -112,8 +112,8 @@
   <Class Name="SuperMario.Enemy">
     <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Enemy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAgAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Enemy\Enemy.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -121,48 +121,48 @@
     <Position X="6" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Turtle.cs</FileName>
+      <FileName>Enemy\Turtle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.Plant">
     <Position X="9.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Plant.cs</FileName>
+      <FileName>Enemy\Plant.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.FlyingTurtle">
     <Position X="5.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FlyingTurtle.cs</FileName>
+      <FileName>Enemy\FlyingTurtle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.LandTurtle">
     <Position X="7" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LandTurtle.cs</FileName>
+      <FileName>Enemy\LandTurtle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.MeatEater">
     <Position X="9" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MeatEater.cs</FileName>
+      <FileName>Enemy\MeatEater.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario.Flower">
     <Position X="10.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Flower.cs</FileName>
+      <FileName>Enemy\Flower.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="SuperMario.IMovable">
+  <Interface Name="SuperMario.IMovable" Collapsed="true">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -177,7 +177,7 @@
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IEnemy.cs</FileName>
+      <FileName>Enemy\IEnemy.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SuperMario.IPoints">

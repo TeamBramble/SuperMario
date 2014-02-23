@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Drawing;
+    using System.IO;
 
     public static class RenderEngine
     {
@@ -21,15 +22,14 @@
             Console.SetWindowSize(windowWidth, windowHeight);
             Console.SetBufferSize(9999, 9999);
             backgroundColors = GetBitmapColors("..\\..\\images\\MarioMap1.jpg");
-
-            for (int h = 0; h < canvasHeight; h++)
+            using (StreamReader reader = new StreamReader("..\\..\\images\\Background.txt"))
             {
-                for (int w = 0; w < canvasWidth; w++)
+                string[] lines = reader.ReadToEnd().Split(Environment.NewLine.ToCharArray());
+
+                foreach (string line in lines)
                 {
-                    Console.ForegroundColor = backgroundColors[w, h];
-                    Console.Write(Pixel);
+                    Console.WriteLine(line);
                 }
-                Console.WriteLine();
             }
             Console.SetWindowPosition(windowsX, windowsY);
         }
