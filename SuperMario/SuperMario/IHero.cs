@@ -2,7 +2,7 @@
 {
     interface IHero
     {
-        int LocationX { get; set; }
-        int LocationY { get; set; }
+       // int LocationX { get; set; }
+       // int LocationY { get; set; }
     }
 }
