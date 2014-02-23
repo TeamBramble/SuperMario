@@ -3,11 +3,37 @@
     using System;
     using System.Linq;
 
-    public class Hero : IHero
+    public class Hero : IHero//,IMovable
     {
         private int locationX = 50;
         private int locationY = 42;
 
+        /* taka moje da izglejda Moving() za hero, ako oprostim renderEngine-a
+        public void Moving()
+        {
+            ConsoleKeyInfo inputKey = Console.ReadKey();
+            if (inputKey.Key == ConsoleKey.RightArrow)
+            {
+                RenderEngine.RenderHero("Right");
+            }
+            else if (inputKey.Key == ConsoleKey.LeftArrow)
+            {
+                RenderEngine.RenderHero("Left");
+            }
+        }
+         */
+        public void MovingHero(Hero mario)
+        {
+            ConsoleKeyInfo inputKey = Console.ReadKey();
+            if (inputKey.Key == ConsoleKey.RightArrow)
+            {
+                RenderEngine.RenderHero(mario,"Right");
+            }
+            else if (inputKey.Key == ConsoleKey.LeftArrow)
+            {
+                RenderEngine.RenderHero(mario,"Left");
+            }
+        }
         public int LocationX
         {
             get
