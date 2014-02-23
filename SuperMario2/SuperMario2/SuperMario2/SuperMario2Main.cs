@@ -8,24 +8,30 @@
         /// <summary>
         /// Here we setup game start
         /// </summary>
-        const int WorldRows = 56;
-        const int WorldCols = 1420;
+
+        const int GameCols = 170;
+        const int GameRows = 56;
+        static readonly Random rand = new Random();
 
         static void Initialize(Engine engine)
         {
-            var brick = new Brick(new MatrixCoords(WorldRows - 3, 10));
-            engine.AddObject(brick);
+            // Generate couple briks
+            for (int i = 0; i < 10; i++)
+            {
+                var brick = new Brick(new MatrixCoords(GameRows - 3, rand.Next(10, GameCols - 20)));
+                engine.AddObject(brick);
+            }
 
-            Mario mario = new Mario(new MatrixCoords(WorldRows - 7, 2));
+            var mario = new Mario(new MatrixCoords(GameRows - 7, GameCols - 6));
             engine.AddObject(mario);
         }
 
         private static void Main()
         {
-            IRenderer renderer = new ConsoleRenderer(WorldRows, WorldCols);
+            IRenderer renderer = new ConsoleRenderer(GameRows, GameCols * 2);
             IUserInterface keyboard = new KeyboardInterface();
 
-            Engine gameEngine = new Engine(renderer, keyboard, 100);
+            Engine gameEngine = new Engine(renderer, keyboard, 100, GameRows, GameCols);
 
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {

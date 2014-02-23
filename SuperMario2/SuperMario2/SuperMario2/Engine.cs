@@ -15,7 +15,7 @@
         private readonly int waitMs;
         private Mario playerMario;
 
-        public Engine(IRenderer renderer, IUserInterface userInterface, int waitMs = 500)
+        public Engine(IRenderer renderer, IUserInterface userInterface, int waitMs, int worldRows, int worldCols)
         {
             this.renderer = renderer;
             this.userInterface = userInterface;
@@ -23,7 +23,13 @@
             this.movingObjects = new List<MovingObject>();
             this.staticObjects = new List<GameObject>();
             this.waitMs = waitMs;
+            this.WorldRows = worldRows;
+            this.WorldCols = worldCols;
         }
+
+        public int WorldRows { get; protected set; }
+
+        public int WorldCols { get; protected set; }
 
         private void AddStaticObject(GameObject obj)
         {
@@ -47,7 +53,7 @@
             {
                 if (obj is Mario)
                 {
-                    AddRacket(obj);
+                    AddMario(obj);
 
                 }
                 else
@@ -57,7 +63,7 @@
             }
         }
 
-        private void AddRacket(GameObject obj)
+        private void AddMario(GameObject obj)
         {
             this.playerMario = obj as Mario;
 
@@ -84,22 +90,35 @@
 
         public virtual void MovePlayerLeft()
         {
-            this.playerMario.MoveLeft();
+            if (this.playerMario.MarioCol() != 0)
+            {
+
+                this.playerMario.MoveLeft();
+            }
         }
 
         public virtual void MovePlayerRight()
         {
-            this.playerMario.MoveRight();
+            if (this.playerMario.MarioCol() + this.playerMario.GetImage().GetLength(0) - 1 < this.WorldRows)
+            {
+                this.playerMario.MoveRight();
+            }
         }
 
         public virtual void MovePlayerUp()
         {
-            this.playerMario.MoveUp();
+            if (this.playerMario.MarioRow() != 0)
+            {
+                this.playerMario.MoveUp();
+            }
         }
 
         public virtual void MovePlayerDown()
         {
-            this.playerMario.MoveDown();
+            if (this.playerMario.MarioRow() + this.playerMario.GetImage().GetLength(0) < this.WorldRows)
+            {
+                this.playerMario.MoveDown();
+            }
         }
 
         public virtual void Run()

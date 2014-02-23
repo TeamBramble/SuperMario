@@ -24,13 +24,23 @@ namespace SuperMario2
         {
             char[,] body = {
                                { ' ', ' ', '^', ' ', ' ', }, 
-                               { ' ', '.', 'O', ')', ' ', }, 
-                               { ' ', '.', 'O', ' ', ' ', }, 
+                               { '~', '<', 'O', '>', '~', }, 
+                               { ' ', 'o', 'M', 'o', ' ', }, 
                                { ' ', ' ', '=', ' ', ' ', }, 
-                               { ' ', '/', ' ', '\\', ' ', }, 
+                               { ' ', '/', '.', '\\', ' ', }, 
                                { '/', ' ', ' ', ' ', '\\', }, 
                            };
             return body;
+        }
+
+        public int MarioRow()
+        {
+            return this.TopLeft.Row;
+        }
+
+        public int MarioCol()
+        {
+            return this.TopLeft.Col;
         }
 
         public void MoveLeft()
