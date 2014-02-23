@@ -7,26 +7,12 @@ namespace SuperMario2
 {
     public class Brick : GameObject
     {
-        public new const string CollisionGroupString = "block";
+        private new const string CollisionGroupString = "brick";
 
         public Brick(MatrixCoords topLeft)
             : base(topLeft, new char[,] { { ' ' } })
         {
             this.body = GetMyBody();
-        }
-
-        /// <summary>
-        ///  Just an exampy to draw brick body
-        /// </summary>
-        /// <returns></returns>
-        private char[,] GetMyBody()
-        {
-            char[,] body = {
-                               { '\u2588', '\u2588', '\u2588', }, 
-                               { '\u2588', '\u2588', '\u2588', }, 
-                               { '\u2588', '\u2588', '\u2588', }, 
-                           };
-            return body;
         }
 
         public override void Update()
@@ -47,6 +33,20 @@ namespace SuperMario2
         public override string GetCollisionGroupString()
         {
             return Brick.CollisionGroupString;
+        }
+
+        /// <summary>
+        ///  Just an exampy to draw brick body
+        /// </summary>
+        /// <returns></returns>
+        private char[,] GetMyBody()
+        {
+            char[,] body = {
+                               { '\u2588', '\u2588', '\u2588', }, 
+                               { '\u2588', '\u2588', '\u2588', }, 
+                               { '\u2588', '\u2588', '\u2588', }, 
+                           };
+            return body;
         }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="CollisionData.cs" />
     <Compile Include="CollisionDispatcher.cs" />
     <Compile Include="ConsoleRenderer.cs" />
+    <Compile Include="Enemy.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="ICollidable.cs" />

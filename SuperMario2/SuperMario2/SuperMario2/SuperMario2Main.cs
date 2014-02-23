@@ -22,7 +22,15 @@
                 engine.AddObject(brick);
             }
 
-            var mario = new Mario(new MatrixCoords(GameRows - 7, GameCols - 6));
+            // Generate ten enemies
+            for (int i = 0; i < 10; i++)
+            {
+                var enemy = new Enemy(new MatrixCoords(rand.Next(5, GameRows - 10), GameCols - 1), new MatrixCoords(0, -1));
+                engine.AddObject(enemy);
+            }
+
+
+            var mario = new Mario(new MatrixCoords(GameRows - 7, 2));
             engine.AddObject(mario);
         }
 

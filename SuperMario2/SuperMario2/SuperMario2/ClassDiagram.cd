@@ -73,6 +73,13 @@
       <FileName>Brick.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SuperMario2.Enemy" Collapsed="true">
+    <Position X="3.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACAAAAAAIAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="SuperMario2.MatrixCoords" Collapsed="true">
     <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>

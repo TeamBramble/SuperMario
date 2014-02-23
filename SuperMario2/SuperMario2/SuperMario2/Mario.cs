@@ -7,7 +7,7 @@ namespace SuperMario2
 {
     public class Mario : GameObject
     {
-        public new const string CollisionGroupString = "racket";
+        private new const string CollisionGroupString = "mario";
 
         public int Width { get; protected set; }
 
@@ -15,22 +15,6 @@ namespace SuperMario2
             : base(topLeft, new char[,] { { ' ' } })
         {
             this.body = GetMyBody();
-        }
-
-        /// <summary>
-        /// Mario hero visualization
-        /// </summary>
-        char[,] GetMyBody()
-        {
-            char[,] body = {
-                               { ' ', ' ', '^', ' ', ' ', }, 
-                               { '~', '<', 'O', '>', '~', }, 
-                               { ' ', 'o', 'M', 'o', ' ', }, 
-                               { ' ', ' ', '=', ' ', ' ', }, 
-                               { ' ', '/', '.', '\\', ' ', }, 
-                               { '/', ' ', ' ', ' ', '\\', }, 
-                           };
-            return body;
         }
 
         public int MarioRow()
@@ -70,11 +54,27 @@ namespace SuperMario2
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == "block" || otherCollisionGroupString == Mario.CollisionGroupString || otherCollisionGroupString == "ball";
+            return otherCollisionGroupString == "brick" || otherCollisionGroupString == Mario.CollisionGroupString || otherCollisionGroupString == "enemy";
         }
 
         public override void Update()
         {
+        }
+
+        /// <summary>
+        /// Mario hero visualization
+        /// </summary>
+        private char[,] GetMyBody()
+        {
+            char[,] body = {
+                               { ' ', ' ', '^', ' ', ' ', }, 
+                               { '~', '<', 'O', '>', '~', }, 
+                               { ' ', 'o', 'M', 'o', ' ', }, 
+                               { ' ', ' ', '=', ' ', ' ', }, 
+                               { ' ', '/', '.', '\\', ' ', }, 
+                               { '/', ' ', ' ', ' ', '\\', }, 
+                           };
+            return body;
         }
     }
 }
