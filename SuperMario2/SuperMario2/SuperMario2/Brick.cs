@@ -22,7 +22,7 @@ namespace SuperMario2
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == "ball";
+            return otherCollisionGroupString == Mario.CollisionGroupString || otherCollisionGroupString == Enemy.CollisionGroupString; 
         }
 
         public override void RespondToCollision(CollisionData collisionData)

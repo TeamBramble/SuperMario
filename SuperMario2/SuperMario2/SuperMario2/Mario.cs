@@ -54,7 +54,7 @@ namespace SuperMario2
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == "brick" || otherCollisionGroupString == Mario.CollisionGroupString || otherCollisionGroupString == "enemy";
+            return otherCollisionGroupString == Brick.CollisionGroupString || otherCollisionGroupString == Enemy.CollisionGroupString;
         }
 
         public override void Update()
