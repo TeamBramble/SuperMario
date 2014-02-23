@@ -41,6 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brick.cs" />
+    <Compile Include="CollisionData.cs" />
+    <Compile Include="CollisionDispatcher.cs" />
+    <Compile Include="ConsoleRenderer.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="ICollidable.cs" />
+    <Compile Include="IObjectProducer.cs" />
+    <Compile Include="IRenderable.cs" />
+    <Compile Include="IRenderer.cs" />
+    <Compile Include="IUserInterface.cs" />
+    <Compile Include="KeyboardInterface.cs" />
+    <Compile Include="MatrixCoords.cs" />
+    <Compile Include="MovingObject.cs" />
+    <Compile Include="Mario.cs" />
     <Compile Include="SuperMario2Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
