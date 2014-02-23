@@ -73,6 +73,7 @@
     <Compile Include="TimeBonus.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="Turtle.cs" />
+    <Compile Include="WriteObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

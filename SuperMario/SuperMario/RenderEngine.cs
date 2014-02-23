@@ -33,6 +33,33 @@
             }
             Console.SetWindowPosition(windowsX, windowsY);
         }
+        public static void RenderEnemy(Enemy enemy, int range)//slagam range dokato napravim collision detection
+        {
+            
+            int i = range;
+            if (i > 0)
+            {
+                while (i > 0)
+                {
+                    enemy.LocationX--;
+                    i -= 1;
+                    Console.SetCursorPosition(enemy.LocationX, enemy.LocationY);
+                    WriteObject.WriteThis(enemy);
+                }
+            }
+            if (i == 0)
+            {
+                while (i < range)
+                {
+                    enemy.LocationX++;
+                    i += 1;
+                    Console.SetCursorPosition(enemy.LocationX, enemy.LocationY);
+                    WriteObject.WriteThis(enemy);
+                }
+            }
+           
+            WriteObject.WriteThis(enemy);
+        }
 
         public static void RenderHero(Hero hero, string move = "None")
         {
