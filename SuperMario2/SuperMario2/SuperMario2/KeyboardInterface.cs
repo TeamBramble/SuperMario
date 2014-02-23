@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SuperMario2
+﻿namespace SuperMario2
 {
+    using System;
+    using System.Linq;
+
     public class KeyboardInterface : IUserInterface
     {
         public event EventHandler OnLeftPressed;
