@@ -29,6 +29,7 @@
 
             if (this.IsDestroyed)
             {
+                this.topLeft = new MatrixCoords(-1, -1);
                 this.body = new char[,] { { ' ' } };
             }
         }

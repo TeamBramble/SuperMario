@@ -16,25 +16,13 @@
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             Console.SetWindowSize(GameCols + 2, GameRows + 2);
-            //Console.SetBufferSize(9999, 300);
 
             // Generate couple briks
             for (int i = 0; i < 10; i++)
             {
                 var brick = new Brick(new MatrixCoords(GameRows - 4, rand.Next(10, GameCols - 20)));
-                var brick4 = new Brick(new MatrixCoords(GameRows - 4, rand.Next(10, GameCols - 20)));
                 engine.AddObject(brick);
-                engine.AddObject(brick4);
             }
-
-            var brick2 = new Brick(new MatrixCoords(GameRows - 20, rand.Next(10, 10)));
-            engine.AddObject(brick2);
-
-            var brick5 = new Brick(new MatrixCoords(GameRows - 25, rand.Next(10, 10)));
-            engine.AddObject(brick5);
-
-            var brick3 = new Brick(new MatrixCoords(GameRows - 15, rand.Next(10, 10)));
-            engine.AddObject(brick3);
 
             // Generate ten enemies
             for (int i = 0; i < 10; i++)
@@ -43,7 +31,10 @@
                 engine.AddObject(enemy);
             }
 
-            var mario = new Mario(new MatrixCoords(GameRows - 11, 2));
+            var timer = new Timer(new MatrixCoords(1, 1));
+            engine.AddObject(timer);
+
+            var mario = new Mario(new MatrixCoords(GameRows - 20, 2));
             engine.AddObject(mario);
         }
 
