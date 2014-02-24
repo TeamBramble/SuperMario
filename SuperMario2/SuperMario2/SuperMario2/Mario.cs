@@ -6,7 +6,7 @@
     public class Mario : GameObject
     {
         private new const string CollisionGroupString = "mario";
-        private int lives = 3;
+        protected int lives = 3;
 
         public Mario(MatrixCoords topLeft)
             : base(topLeft, new char[,] { { ' ' } })

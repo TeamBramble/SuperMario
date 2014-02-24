@@ -40,8 +40,11 @@
                 engine.AddObject(enemy);
             }
 
-            var timer = new Timer(new MatrixCoords(1, 1));
-            engine.AddObject(timer);
+            //var timer = new Timer(new MatrixCoords(1, 1));
+            //engine.AddObject(timer);
+
+            var displayLives = new DisplayLives(new MatrixCoords(1, 1));
+            engine.AddObject(displayLives);
             var mario = new Mario(new MatrixCoords(GameRows - 20, 2));
             engine.AddObject(mario);
         }

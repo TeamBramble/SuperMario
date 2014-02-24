@@ -54,7 +54,7 @@
     <Compile Include="IRenderer.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="KeyboardInterface.cs" />
-    <Compile Include="Lives.cs" />
+    <Compile Include="DisplayLives.cs" />
     <Compile Include="MatrixCoords.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="Mario.cs" />
