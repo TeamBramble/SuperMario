@@ -17,25 +17,20 @@ namespace SuperMario2
 
         public override void Update()
         {
-            //if (!IsDestroyed)
-            //{
-            //    this.IsDestroyed = true;
-            //    this.body = GetMyBody();
-            //}
-            //else
-            //{
-            //    this.IsDestroyed = false;
-            //    this.body = new char[,] { { ' ' } };
-            //}
+            if (this.IsDestroyed)
+            {
+                this.body = new char[,] { { ' ' } };
+            }
         }
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == Enemy.CollisionGroupString; 
+            return otherCollisionGroupString == "mario" || otherCollisionGroupString == "enemy"; 
         }
 
         public override void RespondToCollision(CollisionData collisionData)
         {
+            this.IsDestroyed = true;
         }
 
         public override string GetCollisionGroupString()

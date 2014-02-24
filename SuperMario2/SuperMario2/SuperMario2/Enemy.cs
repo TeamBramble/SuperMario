@@ -15,7 +15,7 @@
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == Brick.CollisionGroupString || otherCollisionGroupString == Mario.CollisionGroupString;
+            return otherCollisionGroupString == "mario";
         }
 
         public override string GetCollisionGroupString()
@@ -23,17 +23,19 @@
             return Enemy.CollisionGroupString;
         }
 
+        protected override void UpdatePosition()
+        {
+            this.TopLeft += this.Speed;
+
+            if (this.IsDestroyed)
+            {
+                this.body = new char[,] { { ' ' } };
+            }
+        }
+
         public override void RespondToCollision(CollisionData collisionData)
         {
-            // TODO: Here we have some error need to be fixed
-            //if (collisionData.CollisionForceDirection.Row * this.Speed.Row < 0)
-            //{
-            //    this.Speed.Row *= -1;
-            //}
-            //if (collisionData.CollisionForceDirection.Col * this.Speed.Col < 0)
-            //{
-            //    this.Speed.Col *= -1;
-            //}
+            this.IsDestroyed = true;
         }
 
         /// <summary>
