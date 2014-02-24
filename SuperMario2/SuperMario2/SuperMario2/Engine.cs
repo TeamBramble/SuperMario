@@ -99,7 +99,7 @@
 
         public virtual void MovePlayerRight()
         {
-            if (this.playerMario.MarioCol() + this.playerMario.GetImage().GetLength(0) - 1 < this.WorldRows)
+            if (this.playerMario.MarioCol() + this.playerMario.GetImage().GetLength(1) < this.WorldCols)
             {
                 this.playerMario.MoveRight();
             }
@@ -126,17 +126,19 @@
             while (true)
             {
                 this.renderer.RenderAll();
-
-                Thread.Sleep(this.waitMs);
-
+                
                 this.userInterface.ProcessInput();
-
+                
                 this.renderer.ClearQueue();
 
                 foreach (var obj in this.allObjects)
                 {
                     obj.Update();
-                    this.renderer.EnqueueForRendering(obj);
+
+                    if (!obj.IsDestroyed)
+                    {
+                        this.renderer.EnqueueForRendering(obj);    
+                    }
                 }
 
                 CollisionDispatcher.HandleCollisions(this.movingObjects, this.staticObjects);
@@ -156,6 +158,8 @@
                 {
                     this.AddObject(obj);
                 }
+
+                Thread.Sleep(this.waitMs);
             }
         }
     }

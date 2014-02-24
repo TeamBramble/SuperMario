@@ -52,11 +52,12 @@
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == Brick.CollisionGroupString || otherCollisionGroupString == Enemy.CollisionGroupString;
+            return otherCollisionGroupString == Enemy.CollisionGroupString || otherCollisionGroupString == Brick.CollisionGroupString;
         }
 
         public override void Update()
         {
+            //Console.SetCursorPosition(this.TopLeft.Col, this.TopLeft.Row);
         }
 
         /// <summary>
@@ -65,12 +66,16 @@
         private char[,] GetMyBody()
         {
             char[,] body = {
-                               { ' ', ' ', '^', ' ', ' ', }, 
-                               { '~', '<', 'O', '>', '~', }, 
-                               { ' ', 'o', 'M', 'o', ' ', }, 
-                               { ' ', ' ', '=', ' ', ' ', }, 
-                               { ' ', '/', '.', '\\', ' ', }, 
-                               { '/', ' ', ' ', ' ', '\\', }, 
+                                { ' ',' ',' ','\u2588','\u2588','\u2588',' ',' ',' ', },
+                                { ' ',' ','\u2588','.','\u2588','.','\u2588',' ',' ', },
+                                { ' ',' ',' ','\u2588','\u2588','\u2588',' ',' ',' ', },
+                                { ' ',' ',' ',' ','\u2588',' ',' ',' ',' ', },
+                                { '.','\u2588','\u2588','\u2588','\u2588','\u2588','\u2588','\u2588','.', },
+                                { ' ',' ',' ','\u2588','M','\u2588',' ',' ',' ', },
+                                { ' ',' ','\u2588','\u2588','\u2588','\u2588','\u2588',' ',' ', },
+                                { ' ',' ','\u2588',' ','$',' ','\u2588',' ',' ', },
+                                { ' ',' ','\u2588',' ',' ',' ','\u2588',' ',' ', },
+                                { '.','\u2588','\u2588',' ',' ',' ','\u2588','\u2588','.', },
                            };
             return body;
         }

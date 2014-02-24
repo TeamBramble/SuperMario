@@ -71,7 +71,7 @@
             {
                 for (int col = 0; col < this.renderContextMatrixCols; col++)
                 {
-                    this.renderContextMatrix[row, col] = '.';
+                    this.renderContextMatrix[row, col] = ' ';
                 }
             }
         }
