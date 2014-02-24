@@ -34,23 +34,23 @@
             engine.AddObject(brick3);
 
             // Generate ten enemies
-            //for (int i = 0; i < 10; i++)
-            //{
-           //     var enemy = new Bomb(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(1, 0));
-           //     engine.AddObject(enemy);
-           // }
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
-                var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
+                var enemy = new Enemy(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
                 engine.AddObject(enemy);
             }
-            var theBoss = new SuperEvil(new MatrixCoords(rand.Next(5,GameRows),rand.Next(GameRows,GameCols)),new MatrixCoords(2,-2));
-            engine.AddObject(theBoss);
+
+<<<<<<< HEAD
+            var timer = new Timer(new MatrixCoords(1, 1));
+            engine.AddObject(timer);
+=======
             //var timer = new Timer(new MatrixCoords(1, 1));
             //engine.AddObject(timer);
 
-         //   var displayLives = new DisplayLives(new MatrixCoords(1, 1));
-           // engine.AddObject(displayLives);
+            var displayLives = new DisplayLives(new MatrixCoords(1, 1));
+            engine.AddObject(displayLives);
+
+>>>>>>> df7cda6931c11364dda6068fcd98b6063eeb9536
             var mario = new Mario(new MatrixCoords(GameRows - 20, 2));
             engine.AddObject(mario);
         }

@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public class Enemy : MovingObject
+    public abstract class Enemy : MovingObject
     {
         private new const string CollisionGroupString = "enemy";
 
@@ -43,12 +43,12 @@
         ///  Just an exampy to draw brick body
         /// </summary>
         /// <returns></returns>
-        private char[,] GetMyBody()
+        public virtual char[,] GetMyBody()
         {
-            char[,] body = {
-                               { ' ', '*', ' ', }, 
-                               { ' ', '\u2588', ' ', }, 
+            char[,] body = { 
                                { '\u2588', ' ', '\u2588', }, 
+                               { ' ', '\u2588', ' ', }, 
+                               { ' ', '*', ' ', },
                            };
             return body;
         }

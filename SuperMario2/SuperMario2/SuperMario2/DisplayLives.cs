@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public class DisplayLives : GameObject
+    public class DisplayLives// : GameObject
     {
         private int displayLives = 3;
 
@@ -11,11 +11,11 @@
 
         //private char[,] body;
 
-        //public DisplayLives(MatrixCoords topLeft)
+       //public DisplayLives(MatrixCoords topLeft)
         //    : base(topLeft)
         //{
         //    this.body = new char[,] { { 'L', 'I', 'V', 'E', 'S', ':', '3' } };
-        //}
+       // }
 
         //public override void Update()
         //{
@@ -41,10 +41,10 @@
         //{
         //    return DisplayLives.CollisionGroupString;
         //}
-        public override void Update()
-        {
+       // public override void Update()
+        //{
             // TODO: Implement this method
-            throw new NotImplementedException();
-        }
+        //    throw new NotImplementedException();
+        //}
     }
 }
