@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    public class Enemy : MovingObject
+    public abstract class Enemy : MovingObject,IEnemy
     {
         private new const string CollisionGroupString = "enemy";
 
@@ -26,21 +26,24 @@
         public override void RespondToCollision(CollisionData collisionData)
         {
             // TODO: Here we have some error need to be fixed
-            //if (collisionData.CollisionForceDirection.Row * this.Speed.Row < 0)
-            //{
-            //    this.Speed.Row *= -1;
-            //}
-            //if (collisionData.CollisionForceDirection.Col * this.Speed.Col < 0)
-            //{
-            //    this.Speed.Col *= -1;
-            //}
+            int rowSpeed = this.Speed.Row;
+            int colSpeed = this.Speed.Col;
+            if (collisionData.CollisionForceDirection.Row * this.Speed.Row < 0)
+            {
+                rowSpeed *= -1;
+            }
+            if (collisionData.CollisionForceDirection.Col * this.Speed.Col < 0)
+            {
+                colSpeed *= -1;
+            }
+            MatrixCoords.Set(Speed, rowSpeed, colSpeed);
         }
 
         /// <summary>
         ///  Just an exampy to draw brick body
         /// </summary>
         /// <returns></returns>
-        private char[,] GetMyBody()
+        public virtual char[,] GetMyBody()
         {
             char[,] body = {
                                { ' ', '*', ' ', }, 

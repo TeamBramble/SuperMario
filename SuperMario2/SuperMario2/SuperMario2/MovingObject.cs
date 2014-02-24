@@ -5,7 +5,7 @@
 
     public class MovingObject : GameObject
     {
-        public MatrixCoords Speed { get; protected set; }
+        public MatrixCoords Speed { get; set; }
 
         public MovingObject(MatrixCoords topLeft, char[,] body, MatrixCoords speed)
             : base(topLeft, body)

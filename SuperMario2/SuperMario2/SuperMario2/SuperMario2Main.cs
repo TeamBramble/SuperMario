@@ -25,10 +25,10 @@
                 engine.AddObject(brick);
             }
 
-            // Generate ten enemies
+            // Generate ten turtles
             for (int i = 0; i < 5; i++)
             {
-                var enemy = new Enemy(new MatrixCoords(rand.Next(5, GameRows - 10), rand.Next(GameRows - 10, GameCols - 2)), new MatrixCoords(0, -1));
+                var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 10), rand.Next(GameRows - 10, GameCols - 2)), new MatrixCoords(0, -1));
                 engine.AddObject(enemy);
             }
 

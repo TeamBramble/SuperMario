@@ -23,6 +23,13 @@
         {
             return new MatrixCoords(a.Row - b.Row, a.Col - b.Col);
         }
+        //Metod, koito promenq stoinostta na koordinatite [row,col]
+        public static MatrixCoords Set(MatrixCoords a, int row, int col)
+        {
+            a.Row = row;
+            a.Col = col;
+            return a;
+        }
 
         public override bool Equals(object obj)
         {
