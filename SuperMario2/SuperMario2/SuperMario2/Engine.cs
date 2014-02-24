@@ -123,7 +123,7 @@
 
         public virtual void Run()
         {
-            while (true)
+            while (!this.playerMario.IsDestroyed)
             {
                 this.renderer.RenderAll();
                 this.renderer.ClearQueue();
@@ -155,6 +155,15 @@
                 }
 
                 Thread.Sleep(this.waitMs);
+            }
+
+            // Dead mario
+            if (this.playerMario.IsDestroyed)
+            {
+                Console.SetCursorPosition(WorldCols / 2 - 4, WorldRows / 2);
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("GAME OVER");
+                Console.ResetColor();
             }
         }
     }

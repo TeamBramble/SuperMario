@@ -6,13 +6,25 @@
     public class Mario : GameObject
     {
         private new const string CollisionGroupString = "mario";
-
-        public int Width { get; protected set; }
+        private int lives = 3;
 
         public Mario(MatrixCoords topLeft)
             : base(topLeft, new char[,] { { ' ' } })
         {
             this.body = GetMyBody();
+        }
+
+        public int Lives
+        {
+            get
+            {
+                return this.lives;
+            }
+
+            private set
+            {
+                this.lives = value;
+            }
         }
 
         public int MarioRow()
@@ -57,7 +69,20 @@
 
         public override void Update()
         {
-            //Console.SetCursorPosition(this.TopLeft.Col, this.TopLeft.Row);
+            if (this.IsDestroyed)
+            {
+                this.body = new char[,] { { ' ' } };
+            }
+        }
+
+        public override void RespondToCollision(CollisionData collisionData)
+        {
+            this.Lives--;
+
+            if (lives <= 0)
+            {
+                this.IsDestroyed = true;
+            }
         }
 
         /// <summary>
