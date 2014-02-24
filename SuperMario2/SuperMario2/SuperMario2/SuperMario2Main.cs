@@ -195,7 +195,7 @@
             //    }
             //}
 
-            SoundPlayer player = new SoundPlayer(@"start.wav");
+            SoundPlayer player = new SoundPlayer(@"..\..\properties\start.wav");
             player.Play();
 
             Console.SetCursorPosition(0, 0);
