@@ -15,17 +15,20 @@
         static void Initialize(Engine engine)
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
-            //Console.SetWindowSize(GameCols, GameRows + 10);
+            Console.SetWindowSize(GameCols + 2, GameRows + 2);
             //Console.SetBufferSize(9999, 300);
 
             // Generate couple briks
             for (int i = 0; i < 10; i++)
             {
-                var brick = new Brick(new MatrixCoords(GameRows - 3, rand.Next(10, GameCols - 20)));
+                var brick = new Brick(new MatrixCoords(GameRows - 4, rand.Next(10, GameCols - 20)));
                 engine.AddObject(brick);
             }
 
-            // Generate ten turtles
+            var brick2 = new Brick(new MatrixCoords(GameRows - 10, rand.Next(10, 10)));
+            engine.AddObject(brick2);
+
+            // Generate ten enemies
             for (int i = 0; i < 5; i++)
             {
                 var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 10), rand.Next(GameRows - 10, GameCols - 2)), new MatrixCoords(0, -1));
