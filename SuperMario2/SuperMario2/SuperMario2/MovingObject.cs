@@ -3,17 +3,17 @@
     using System;
     using System.Linq;
 
-    public abstract class MovingObject : GameObject
+    public class MovingObject : GameObject
     {
         public MatrixCoords Speed { get; set; }
 
-        public MovingObject(MatrixCoords topLeft, char[,] body)
+        public MovingObject(MatrixCoords topLeft, char[,] body, MatrixCoords speed)
             : base(topLeft, body)
         {
-          
+            this.Speed = speed;
         }
 
-        public virtual void UpdatePosition()
+        protected virtual void UpdatePosition()
         {
             this.TopLeft += this.Speed;
         }

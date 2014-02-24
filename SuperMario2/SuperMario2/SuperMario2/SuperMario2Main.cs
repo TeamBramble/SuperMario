@@ -22,19 +22,26 @@
             for (int i = 0; i < 10; i++)
             {
                 var brick = new Brick(new MatrixCoords(GameRows - 4, rand.Next(10, GameCols - 20)));
+                var brick4 = new Brick(new MatrixCoords(GameRows - 4, rand.Next(10, GameCols - 20)));
                 engine.AddObject(brick);
+                engine.AddObject(brick4);
             }
 
-            var brick2 = new Brick(new MatrixCoords(GameRows - 10, rand.Next(10, 10)));
+            var brick2 = new Brick(new MatrixCoords(GameRows - 20, rand.Next(10, 10)));
             engine.AddObject(brick2);
 
+            var brick5 = new Brick(new MatrixCoords(GameRows - 25, rand.Next(10, 10)));
+            engine.AddObject(brick5);
+
+            var brick3 = new Brick(new MatrixCoords(GameRows - 15, rand.Next(10, 10)));
+            engine.AddObject(brick3);
+
             // Generate ten enemies
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                var enemy = new FlyingTurtle(new MatrixCoords(GameRows - 5, rand.Next(GameRows - 10, GameCols - 2)));
+                var enemy = new Enemy(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
                 engine.AddObject(enemy);
             }
-
 
             var mario = new Mario(new MatrixCoords(GameRows - 11, 2));
             engine.AddObject(mario);

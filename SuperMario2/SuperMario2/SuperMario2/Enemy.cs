@@ -3,31 +3,19 @@
     using System;
     using System.Linq;
 
-    public abstract class Enemy : MovingObject,IEnemy
-
+    public class Enemy : MovingObject
     {
         private new const string CollisionGroupString = "enemy";
 
-        public Enemy(MatrixCoords topLeft)
-            : base(topLeft, new char[,] { { ' ' } })
+        public Enemy(MatrixCoords topLeft, MatrixCoords speed)
+            : base(topLeft, new char[,] { { ' ' } }, speed)
         {
             this.body = GetMyBody();
         }
 
-        public override void UpdatePosition()
-        {
-         
-            this.TopLeft += this.Speed;
-            if (this.IsDestroyed)
-            {
-                this.body = new char[,] { { ' ' } };
-            }
-        
-        }
-
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == Brick.CollisionGroupString || otherCollisionGroupString == Mario.CollisionGroupString;
+            return otherCollisionGroupString == "mario";
         }
 
         public override string GetCollisionGroupString()
@@ -35,33 +23,31 @@
             return Enemy.CollisionGroupString;
         }
 
+        protected override void UpdatePosition()
+        {
+            this.TopLeft += this.Speed;
+
+            if (this.IsDestroyed)
+            {
+                this.body = new char[,] { { ' ' } };
+            }
+        }
+
         public override void RespondToCollision(CollisionData collisionData)
         {
-            // TODO: Here we have some error need to be fixed
-            int rowSpeed = this.Speed.Row;
-            int colSpeed = this.Speed.Col;
-            if (collisionData.CollisionForceDirection.Row * this.Speed.Row < 0)
-            {
-                rowSpeed *= -1;
-            }
-            if (collisionData.CollisionForceDirection.Col * this.Speed.Col < 0)
-            {
-                colSpeed *= -1;
-            }
-            MatrixCoords.Set(Speed, rowSpeed, colSpeed);
+            this.IsDestroyed = true;
         }
 
         /// <summary>
         ///  Just an exampy to draw brick body
         /// </summary>
         /// <returns></returns>
-        public virtual char[,] GetMyBody()
+        private char[,] GetMyBody()
         {
             char[,] body = {
-                               { ' ', '*', ' ', ' ',}, 
-                               { ' ', '\u2588', ' ',' ', }, 
-                               { '\u2588', ' ', '\u2588',' ', },
-                               { '\u2588', ' ', '\u2588',' ', }, 
+                               { ' ', '*', ' ', }, 
+                               { ' ', '\u2588', ' ', }, 
+                               { '\u2588', ' ', '\u2588', }, 
                            };
             return body;
         }

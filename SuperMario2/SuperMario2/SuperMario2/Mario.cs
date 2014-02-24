@@ -52,7 +52,7 @@
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == Enemy.CollisionGroupString || otherCollisionGroupString == Brick.CollisionGroupString;
+            return otherCollisionGroupString == "enemy" || otherCollisionGroupString == "brick";
         }
 
         public override void Update()
