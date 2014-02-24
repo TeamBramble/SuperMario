@@ -20,7 +20,12 @@
 
         public override void Update()
         {
-            timer++;
+            this.timer++;
+
+            if (this.timer > 300)
+            {
+                this.IsDestroyed = true;
+            }
 
             char[] p = timer.ToString().PadLeft(6, '0').ToCharArray();
             char[,] p2d = { 
@@ -38,6 +43,7 @@
 
             this.body = p2d;
         }
+
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {

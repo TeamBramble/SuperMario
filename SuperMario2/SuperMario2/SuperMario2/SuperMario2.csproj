@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bomb.cs" />
+    <Compile Include="Bonus.cs" />
+    <Compile Include="BonusLives.cs" />
+    <Compile Include="BonusPoints.cs" />
     <Compile Include="Brick.cs" />
     <Compile Include="CollisionData.cs" />
     <Compile Include="CollisionDispatcher.cs" />

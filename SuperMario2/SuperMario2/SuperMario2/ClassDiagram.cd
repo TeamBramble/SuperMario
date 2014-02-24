@@ -1,131 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SuperMario2.SuperMario2Main" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="SuperMario2.Bomb" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAQIAAAAAAAAAgAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>SuperMario2Main.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bomb.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario2.ConsoleRenderer" Collapsed="true">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+  <Class Name="SuperMario2.Brick" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAABAAAAIAAAAAABAAACAAAAEAAAA=</HashCode>
-      <FileName>ConsoleRenderer.cs</FileName>
+      <HashCode>BASAAAAAAIAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
+      <FileName>Brick.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SuperMario2.GameObject" Collapsed="true">
-    <Position X="3.75" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAyAAAAAAIAAABAQAAAAABAQAQAAAAQAAIAAAAGAEAA=</HashCode>
-      <FileName>GameObject.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SuperMario2.CollisionData" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="14.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CollisionData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario2.CollisionDispatcher" Collapsed="true">
-    <Position X="11" Y="0.5" Width="1.5" />
+    <Position X="16" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAIAAACAAAAAAAAAACAAAABAAAAAAAAAAAACAAA=</HashCode>
       <FileName>CollisionDispatcher.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario2.MovingObject" Collapsed="true">
-    <Position X="3.75" Y="5.5" Width="1.5" />
+  <Class Name="SuperMario2.ConsoleRenderer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MovingObject.cs</FileName>
+      <HashCode>AAAAAAAAAQAAAAAAABAAAAIAAAAAABAAACAAAAEAAAA=</HashCode>
+      <FileName>ConsoleRenderer.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SuperMario2.Engine" Collapsed="true">
-    <Position X="9.25" Y="1.5" Width="1.5" />
+  <Class Name="SuperMario2.DisplayLives" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAFAAAAEAAAAAAAgECAAAFggAAAAAAkQAAACEgAI=</HashCode>
-      <FileName>Engine.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SuperMario2.Mario" Collapsed="true">
-    <Position X="6.25" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BIWAAAAAAIQAAAAAAAAAAAAAAAIAAAYKQAAAAAAAAAA=</HashCode>
-      <FileName>Mario.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SuperMario2.KeyboardInterface" Collapsed="true">
-    <Position X="11" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAACAA=</HashCode>
-      <FileName>KeyboardInterface.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SuperMario2.Brick" Collapsed="true">
-    <Position X="1.5" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BASAAAAAAIAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
-      <FileName>Brick.cs</FileName>
+      <HashCode>BASAAAAAAIAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAA=</HashCode>
+      <FileName>DisplayLives.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario2.Enemy" Collapsed="true">
-    <Position X="3.75" Y="7" Width="1.5" />
+    <Position X="8.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BACAAAAAAIAAACAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SuperMario2.Engine" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAFAAAAEAAAAAAAgECAAAFggACAAAAkQAAACEgAI=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.GameObject" Collapsed="true">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAyAAAAAAIAAABAQAAAAABAQAQAAAAQAAIAAAAGAEAA=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SuperMario2.KeyboardInterface" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAACAA=</HashCode>
+      <FileName>KeyboardInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperMario2.Mario" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIWAAAAAAIQAAAAAAAAAAAAAAAIAAAYKQAAAAAAAAAA=</HashCode>
+      <FileName>Mario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.MovingObject" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MovingObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.SuperEvil" Collapsed="true">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAAAEAAAA=</HashCode>
+      <FileName>SuperEvil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.SuperMario2Main" Collapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAQIAAAAAAAAggAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>SuperMario2Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SuperMario2.Timer" Collapsed="true">
-    <Position X="8" Y="5.5" Width="1.5" />
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
       <HashCode>BASAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Timer.cs</FileName>
-  <Class Name="SuperMario2.DisplayLives" Collapsed="true">
-    <Position X="10" Y="5.5" Width="1.5" />
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>DisplayLives.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.Turtle" Collapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Turtle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.Bonus">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.BonusPoints">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BonusPoints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperMario2.BonusLives">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BonusLives.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Struct Name="SuperMario2.MatrixCoords" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="14.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAwAEAAAAAAAEAAoAAAAAAAAAAAAA=</HashCode>
       <FileName>MatrixCoords.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="SuperMario2.IRenderer" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>IRenderer.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="SuperMario2.IRenderable" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>IRenderable.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="SuperMario2.ICollidable" Collapsed="true">
-    <Position X="2.75" Y="2.5" Width="1.5" />
+    <Position X="14.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BACAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>ICollidable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SuperMario2.IObjectProducer" Collapsed="true">
-    <Position X="4.75" Y="2.5" Width="1.5" />
+    <Position X="16" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>IObjectProducer.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="SuperMario2.IRenderable" Collapsed="true">
+    <Position X="17.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IRenderable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SuperMario2.IRenderer" Collapsed="true">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>IRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="SuperMario2.IUserInterface" Collapsed="true">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="16" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAACAA=</HashCode>
       <FileName>IUserInterface.cs</FileName>

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Reflection;
     using System.Threading;
 
     public class Engine
@@ -14,6 +15,7 @@
         private readonly List<GameObject> staticObjects;
         private readonly int waitMs;
         private Mario playerMario;
+        private bool runEngine = true;
 
         public Engine(IRenderer renderer, IUserInterface userInterface, int waitMs, int worldRows, int worldCols)
         {
@@ -123,7 +125,7 @@
 
         public virtual void Run()
         {
-            while (!this.playerMario.IsDestroyed)
+            while (runEngine)
             {
                 this.renderer.RenderAll();
                 this.renderer.ClearQueue();
@@ -142,6 +144,22 @@
 
                 foreach (var obj in this.allObjects)
                 {
+                    // Chek for Timer time elapsed. Limited to 300
+                    if (obj is Timer)
+                    {
+                        if (obj.IsDestroyed)
+                        {
+                            runEngine = false;
+                        }
+                    }
+
+                    // Update Lives from Mario lives with crazy refflection
+                    if (obj is DisplayLives)
+                    {
+                        int currentLives = this.playerMario.Lives;
+                        obj.GetType().GetProperty("Lives").SetValue(obj, currentLives);
+                    }
+
                     producedObjects.AddRange(obj.ProduceObjects());
                 }
 
@@ -155,10 +173,15 @@
                 }
 
                 Thread.Sleep(this.waitMs);
+
+                if (this.playerMario.IsDestroyed)
+                {
+                    runEngine = false;
+                }
             }
 
             // Dead mario
-            if (this.playerMario.IsDestroyed)
+            if (!runEngine)
             {
                 Console.SetCursorPosition(WorldCols / 2 - 4, WorldRows / 2);
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
