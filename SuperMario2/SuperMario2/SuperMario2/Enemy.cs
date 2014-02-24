@@ -4,13 +4,25 @@
     using System.Linq;
 
     public abstract class Enemy : MovingObject,IEnemy
+
     {
         private new const string CollisionGroupString = "enemy";
 
-        public Enemy(MatrixCoords topLeft, MatrixCoords speed)
-            : base(topLeft, new char[,] { { ' ' } }, speed)
+        public Enemy(MatrixCoords topLeft)
+            : base(topLeft, new char[,] { { ' ' } })
         {
             this.body = GetMyBody();
+        }
+
+        public override void UpdatePosition()
+        {
+         
+            this.TopLeft += this.Speed;
+            if (this.IsDestroyed)
+            {
+                this.body = new char[,] { { ' ' } };
+            }
+        
         }
 
         public override bool CanCollideWith(string otherCollisionGroupString)
@@ -46,9 +58,10 @@
         public virtual char[,] GetMyBody()
         {
             char[,] body = {
-                               { ' ', '*', ' ', }, 
-                               { ' ', '\u2588', ' ', }, 
-                               { '\u2588', ' ', '\u2588', }, 
+                               { ' ', '*', ' ', ' ',}, 
+                               { ' ', '\u2588', ' ',' ', }, 
+                               { '\u2588', ' ', '\u2588',' ', },
+                               { '\u2588', ' ', '\u2588',' ', }, 
                            };
             return body;
         }

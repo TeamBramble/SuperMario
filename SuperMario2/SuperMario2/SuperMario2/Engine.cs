@@ -18,7 +18,7 @@
         public Engine(IRenderer renderer, IUserInterface userInterface, int waitMs, int worldRows, int worldCols)
         {
             Console.SetWindowSize(120,60);
-            Console.SetBufferSize(500, 100);
+            Console.SetBufferSize(120, 60);
             this.renderer = renderer;
             this.userInterface = userInterface;
             this.allObjects = new List<GameObject>();
