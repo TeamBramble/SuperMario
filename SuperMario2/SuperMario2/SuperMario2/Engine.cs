@@ -126,19 +126,14 @@
             while (true)
             {
                 this.renderer.RenderAll();
+                this.renderer.ClearQueue();
                 
                 this.userInterface.ProcessInput();
                 
-                this.renderer.ClearQueue();
-
                 foreach (var obj in this.allObjects)
                 {
                     obj.Update();
-
-                    if (!obj.IsDestroyed)
-                    {
-                        this.renderer.EnqueueForRendering(obj);    
-                    }
+                    this.renderer.EnqueueForRendering(obj);   
                 }
 
                 CollisionDispatcher.HandleCollisions(this.movingObjects, this.staticObjects);
