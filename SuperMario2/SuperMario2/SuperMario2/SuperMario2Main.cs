@@ -69,7 +69,7 @@
 
             Engine gameEngine = new Engine(renderer, keyboard, 100, GameRows, GameCols);
 
-            //PutStartingScreen();
+            PutStartingScreen();
 
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
@@ -200,7 +200,7 @@
             //    }
             //}
 
-            SoundPlayer player = new SoundPlayer(@"start.wav");
+            SoundPlayer player = new SoundPlayer(@"..\..\properties\start.wav");
             player.Play();
 
             Console.SetCursorPosition(0, 0);
