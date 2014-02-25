@@ -30,7 +30,12 @@
 
             return objAsMatrixCoords.Row == this.Row && objAsMatrixCoords.Col == this.Col;
         }
-
+        public static MatrixCoords Set(MatrixCoords a, int row, int col)
+        {
+            a.Row = row;
+            a.Col = col;
+            return a;
+        }
         public override int GetHashCode()
         {
             return this.Row.GetHashCode() * 7 + this.Col;

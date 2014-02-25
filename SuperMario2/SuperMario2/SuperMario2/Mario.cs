@@ -89,7 +89,14 @@
             {
                 this.Lives++;
             }
-
+            if (collisionData.HitObjectsCollisionGroupStrings.Contains("boss"))
+            {
+                this.Lives-=2;
+            }
+            if (collisionData.HitObjectsCollisionGroupStrings.Contains("bomb"))
+            {
+                this.Lives--;
+            }
             if (lives <= 0)
             {
                 this.IsDestroyed = true;

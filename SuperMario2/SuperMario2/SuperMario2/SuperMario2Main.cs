@@ -27,19 +27,19 @@
             }
 
             // Generate ten enemies
-            //for (int i = 0; i < 10; i++)
-            //{
-            //     var enemy = new Bomb(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(1, 0));
-            //     engine.AddObject(enemy);
-            // }
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
-            //    engine.AddObject(enemy);
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                 var enemy = new Bomb(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(1, 0));
+                 engine.AddObject(enemy);
+             }
+            for (int i = 0; i < 10; i++)
+            {
+                var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
+                engine.AddObject(enemy);
+            }
 
-            //var theBoss = new SuperEvil(new MatrixCoords(rand.Next(5, GameRows), rand.Next(GameRows, GameCols)), new MatrixCoords(2, -2));
-            //engine.AddObject(theBoss);
+            var theBoss = new SuperEvil(new MatrixCoords(rand.Next(5, GameRows), rand.Next(GameRows, GameCols)), new MatrixCoords(2, -2));
+            engine.AddObject(theBoss);
 
             var timer = new Timer(new MatrixCoords(1, 1));
             engine.AddObject(timer);
