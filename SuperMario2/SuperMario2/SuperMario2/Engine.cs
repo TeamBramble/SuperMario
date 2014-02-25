@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Reflection;
     using System.Threading;
 
     public class Engine
@@ -16,6 +15,7 @@
         private readonly int waitMs;
         private Mario playerMario;
         private bool runEngine = true;
+        private int playerPoints = 0;
 
         public Engine(IRenderer renderer, IUserInterface userInterface, int waitMs, int worldRows, int worldCols)
         {
@@ -129,13 +129,13 @@
             {
                 this.renderer.RenderAll();
                 this.renderer.ClearQueue();
-                
+
                 this.userInterface.ProcessInput();
-                
+
                 foreach (var obj in this.allObjects)
                 {
                     obj.Update();
-                    this.renderer.EnqueueForRendering(obj);   
+                    this.renderer.EnqueueForRendering(obj);
                 }
 
                 CollisionDispatcher.HandleCollisions(this.movingObjects, this.staticObjects);
@@ -147,10 +147,8 @@
                     // Chek for Timer time elapsed. Limited to 300
                     if (obj is Timer)
                     {
-                        if (obj.IsDestroyed)
-                        {
-                            runEngine = false;
-                        }
+                        obj.GetType().GetProperty("OutTimer").SetValue(obj, this.playerPoints);
+                        this.playerPoints = 0;
                     }
 
                     // Update Lives from Mario lives with crazy refflection
@@ -158,6 +156,15 @@
                     {
                         int currentLives = this.playerMario.Lives;
                         obj.GetType().GetProperty("Lives").SetValue(obj, currentLives);
+                    }
+
+                    // Remove 100 bonus points
+                    if (obj is BonusPoints)
+                    {
+                        if (obj.IsDestroyed)
+                        {
+                            playerPoints = 100;
+                        }
                     }
 
                     producedObjects.AddRange(obj.ProduceObjects());

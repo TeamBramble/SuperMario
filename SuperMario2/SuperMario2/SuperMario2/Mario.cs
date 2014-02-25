@@ -21,7 +21,7 @@
                 return this.lives;
             }
 
-            private set
+            set
             {
                 this.lives = value;
             }
@@ -78,6 +78,17 @@
         public override void RespondToCollision(CollisionData collisionData)
         {
             this.Lives--;
+
+            // Resete collision remove lives when hitted by bonuses
+            if (collisionData.HitObjectsCollisionGroupStrings.Contains("bonuslives"))
+            {
+                this.Lives += 2;
+            }
+
+            if (collisionData.HitObjectsCollisionGroupStrings.Contains("bonuspoints"))
+            {
+                this.Lives++;
+            }
 
             if (lives <= 0)
             {

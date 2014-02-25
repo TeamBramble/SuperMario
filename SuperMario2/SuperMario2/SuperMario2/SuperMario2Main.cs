@@ -29,17 +29,17 @@
             // Generate ten enemies
             //for (int i = 0; i < 10; i++)
             //{
-           //     var enemy = new Bomb(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(1, 0));
-           //     engine.AddObject(enemy);
-           // }
-            for (int i = 0; i < 20; i++)
-            {
-                var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
-                engine.AddObject(enemy);
-            }
+            //     var enemy = new Bomb(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(1, 0));
+            //     engine.AddObject(enemy);
+            // }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    var enemy = new Turtle(new MatrixCoords(rand.Next(5, GameRows - 15), rand.Next(GameRows - 15, GameCols - 2)), new MatrixCoords(0, -1));
+            //    engine.AddObject(enemy);
+            //}
 
-            var theBoss = new SuperEvil(new MatrixCoords(rand.Next(5,GameRows),rand.Next(GameRows,GameCols)),new MatrixCoords(2,-2));
-            engine.AddObject(theBoss);
+            //var theBoss = new SuperEvil(new MatrixCoords(rand.Next(5, GameRows), rand.Next(GameRows, GameCols)), new MatrixCoords(2, -2));
+            //engine.AddObject(theBoss);
 
             var timer = new Timer(new MatrixCoords(1, 1));
             engine.AddObject(timer);
@@ -49,6 +49,17 @@
 
             var mario = new Mario(new MatrixCoords(GameRows - 20, 2));
             engine.AddObject(mario);
+
+            // Add some bonus and lives
+
+            for (int i = 0; i < 3; i++)
+            {
+                var bonusPoints = new BonusPoints(new MatrixCoords(rand.Next(15, GameRows - 15), rand.Next(GameRows, GameCols)), new MatrixCoords(0, -1));
+                engine.AddObject(bonusPoints);
+
+                var bonusLives = new BonusLives(new MatrixCoords(rand.Next(10, GameRows - 5), rand.Next(GameRows, GameCols)), new MatrixCoords(0, -1));
+                engine.AddObject(bonusLives);
+            }
         }
 
         private static void Main()

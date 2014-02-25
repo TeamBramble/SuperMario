@@ -115,22 +115,22 @@
       <FileName>Turtle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SuperMario2.Bonus">
-    <Position X="3.25" Y="4.5" Width="1.5" />
+  <Class Name="SuperMario2.Bonus" Collapsed="true">
+    <Position X="4" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BACAAAAAAIAAACAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>Bonus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario2.BonusPoints">
-    <Position X="2.25" Y="6" Width="1.5" />
+    <Position X="3" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BACAAAAAAIAAACAAAAAAAAAAAQAAAAYAAAAAAAAAAAA=</HashCode>
       <FileName>BonusPoints.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SuperMario2.BonusLives">
-    <Position X="4.25" Y="6" Width="1.5" />
+    <Position X="5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusLives.cs</FileName>

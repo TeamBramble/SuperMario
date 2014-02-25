@@ -7,27 +7,30 @@
     {
         public new const string CollisionGroupString = "timer";
 
-        private int timer;
-
         public Timer(MatrixCoords topLeft)
             : base(topLeft, new char[,] { 
                                             { 'P', 'O', 'I', 'N', 'T', 'S' }, 
                                             { '0', '0', '0', '0', '0', '0' },
                                         })
         {
-            this.timer = 0;
         }
+
+        public int TimerClock { get; set; }
+
+        public int OutTimer { get; set; }
 
         public override void Update()
         {
-            this.timer++;
+            this.TimerClock++;
 
-            if (this.timer > 300)
+            this.TimerClock -= this.OutTimer;
+
+            if (this.TimerClock > 300)
             {
                 this.IsDestroyed = true;
             }
 
-            char[] p = timer.ToString().PadLeft(6, '0').ToCharArray();
+            char[] p = TimerClock.ToString().PadLeft(6, '0').ToCharArray();
             char[,] p2d = { 
                             { 'P', 'O', 'I', 'N', 'T', 'S' }, 
                             { '0', '0', '0', '0', '0', '0' },

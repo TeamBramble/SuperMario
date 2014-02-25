@@ -17,6 +17,12 @@
 
         public override void Update()
         {
+            // We have place only for one symbol
+            if (this.Lives > 9)
+            {
+                this.Lives = 9;
+            }
+
             char heroLives = char.Parse(this.Lives.ToString());
 
             char[,] heroLivesText = { { 'L', 'I', 'V', 'E', 'S', ':', '3' } };
