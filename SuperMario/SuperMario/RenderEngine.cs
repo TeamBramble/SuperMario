@@ -78,7 +78,11 @@
             else if (move == "Left")
             {
                 ClearHeroSigns(hero, move);
-                hero.LocationX--;       
+                hero.LocationX--;
+                if (hero.LocationX > (windowWidth / 2))
+                {
+                    Console.SetWindowPosition(windowsX--, windowsY);
+                }
             }
 
             Console.SetCursorPosition(hero.LocationX, hero.LocationY);

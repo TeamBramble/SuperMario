@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using System.Media;
 
     public abstract class Enemy : MovingObject
     {
@@ -35,8 +36,11 @@
         }
 
         public override void RespondToCollision(CollisionData collisionData)
-        {
+        { 
+            SoundPlayer player = new SoundPlayer(@"..\..\properties\HitByEnemy.wav");
+            player.Play();
             this.IsDestroyed = true;
+           
         }
 
         /// <summary>

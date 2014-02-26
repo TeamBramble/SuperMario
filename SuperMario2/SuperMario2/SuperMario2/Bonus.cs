@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using System.Media;
 
     public abstract class Bonus : MovingObject
     {
@@ -35,10 +36,13 @@
         }
 
         public override void RespondToCollision(CollisionData collisionData)
-        {
+        {   
+           
             this.IsDestroyed = true;
+            SoundPlayer player = new SoundPlayer(@"..\..\properties\collect.wav");
+            player.Play();
         }
-
+      
         public virtual char[,] GetMyBody()
         {
             char[,] body = { { ' ' } };
